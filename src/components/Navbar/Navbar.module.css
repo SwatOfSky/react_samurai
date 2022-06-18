@@ -6,3 +6,7 @@
 .item {
     color: chocolate;
 }
+
+.active {
+    color: blue;
+}

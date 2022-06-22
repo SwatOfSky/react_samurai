@@ -9,14 +9,15 @@ import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 
 const App = (props) => {
+
     return (
         <Router>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <Routes>
-                    <Route path='/profile' element={<Profile/>}/>
-                    <Route path='/dialogs/*' element={<Dialogs/>}/>
+                    <Route path='/profile' element={<Profile postsData={props.postsData}/>}/>
+                    <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dialogsData={props.dialogsData}/>}/>
                     <Route path='/music' element={<Music/>}/>
                     <Route path='/news' element={<News/>}/>
                     <Route path='/settings' element={<Settings/>}/>

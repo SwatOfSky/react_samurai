@@ -3,10 +3,12 @@ import MyPosts from "./MyPosts/MyPosts";
 import s from './Profile.module.css'
 import DisplayProfile from "./DisplayProfile/DisplayProfile";
 
-const Profile = () => {
+
+const Profile = (props) => { 
+
   return <div className='app-wrapper-content'>
     <DisplayProfile />
-    <MyPosts />
+    <MyPosts postsData={props.postsData}/>
   </div>
 }
 

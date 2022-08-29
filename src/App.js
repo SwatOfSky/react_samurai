@@ -21,7 +21,7 @@ const App = (props) => {
                         newPostsText={props.state.newPostsText}
                         dispatch={props.dispatch} />} />
                     <Route path='/dialogs/*' element={<Dialogs messagesData={props.state.messagesData}
-                        dialogsData={props.state.dialogsData} />} />
+                        dialogsData={props.state.dialogsData} dispatch={props.dispatch}/>} />
                     <Route path='/music' element={<Music />} />
                     <Route path='/news' element={<News />} />
                     <Route path='/settings' element={<Settings />} />

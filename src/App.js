@@ -12,6 +12,7 @@ import { updateNewPostText } from "./redux/state";
 const App = (props) => {
 
     return (
+       
         <Router>
             <div className='app-wrapper'>
                 <Header />

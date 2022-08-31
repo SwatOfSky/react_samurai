@@ -22,7 +22,7 @@ let initialState = {
       { id: 2, text: 'Skibidibu' },
       { id: 3, text: 'How old are you?' }
     ],
-    newMessageBody: ""
+    newMessageBody: 'Text your message'
   };
 
 const reducer = (state = initialState, action) => {
@@ -44,8 +44,8 @@ const reducer = (state = initialState, action) => {
             return state; 
         case SEND_MESSAGE:
             let body = state.newMessageBody;
-            state.newMessageBody = '';
             state.messagesData.push({ id: 4, text: body });
+            state.newMessageBody = '';
             return state; 
         default:
             return state; 

@@ -11,15 +11,14 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 const App = (props) => {
 
     return (
-       
+
         <Router>
             <div className='app-wrapper'>
                 <Header />
                 <Navbar />
                 <Routes>
-                    <Route path='/profile' element={<Profile store={props.store} />} />
-                    <Route path='/dialogs/*' element={<DialogsContainer store={props.store}messagesData={props.state.messagesData}
-                        dialogsData={props.state.dialogsData} dispatch={props.dispatch}/>} />
+                    <Route path='/profile' element={<Profile />} />
+                    <Route path='/dialogs/*' element={<DialogsContainer />} />
                     <Route path='/music' element={<Music />} />
                     <Route path='/news' element={<News />} />
                     <Route path='/settings' element={<Settings />} />
